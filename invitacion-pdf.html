@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Baby Shower - Oliver Alessandro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A5 portrait;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(180deg, #FFFDF5 0%, #FFF8E7 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .invitation {
+            width: 148mm;
+            height: 210mm;
+            background: linear-gradient(180deg, #FFFDF5 0%, #FFF8E7 100%);
+            border: 4px solid #F5A623;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(139, 115, 85, 0.2);
+        }
+
+        .honey-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(135deg, #FFD93D 0%, #F5A623 50%, #E8A317 100%);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .pooh-icon {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #6B5344;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 2.8rem;
+            color: #F5A623;
+            text-shadow: 2px 2px 0 #E8A317;
+            margin-bottom: 10px;
+        }
+
+        .baby-label {
+            font-size: 1rem;
+            color: #6B5344;
+        }
+
+        .baby-name {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 2.5rem;
+            color: #C0392B;
+            margin: 5px 0 15px;
+        }
+
+        .divider {
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #F5A623, transparent);
+            margin: 15px auto;
+        }
+
+        .parents {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .parents-intro {
+            font-size: 0.9rem;
+            color: #8B7355;
+        }
+
+        .parents-names {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.8rem;
+            color: #F5A623;
+            margin: 5px 0;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .detail-item {
+            flex: 1;
+        }
+
+        .detail-icon {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .detail-label {
+            font-size: 0.75rem;
+            color: #8B7355;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .detail-value {
+            font-weight: 700;
+            color: #4A3728;
+            font-size: 0.95rem;
+        }
+
+        .qr-section {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 217, 61, 0.2);
+            border-radius: 15px;
+        }
+
+        .qr-title {
+            font-size: 0.9rem;
+            color: #4A3728;
+            margin-bottom: 10px;
+        }
+
+        .qr-code {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 10px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-code img {
+            width: 90px;
+            height: 90px;
+        }
+
+        .website-url {
+            font-size: 0.8rem;
+            color: #6B5344;
+            word-break: break-all;
+        }
+
+        .footer-decoration {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1.5rem;
+            letter-spacing: 10px;
+        }
+
+        .corner-decoration {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+
+        .corner-tl {
+            top: 15px;
+            left: 15px;
+        }
+
+        .corner-tr {
+            top: 15px;
+            right: 15px;
+        }
+
+        .corner-bl {
+            bottom: 15px;
+            left: 15px;
+        }
+
+        .corner-br {
+            bottom: 15px;
+            right: 15px;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #FFD93D 0%, #F5A623 100%);
+            border: none;
+            border-radius: 50px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #4A3728;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(245, 166, 35, 0.4);
+        }
+
+        .print-btn:hover {
+            transform: scale(1.05);
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .print-btn {
+                display: none;
+            }
+
+            .invitation {
+                box-shadow: none;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invitation">
+        <div class="honey-border"></div>
+
+        <span class="corner-decoration corner-tl">🍯</span>
+        <span class="corner-decoration corner-tr">🐝</span>
+        <span class="corner-decoration corner-bl">🐝</span>
+        <span class="corner-decoration corner-br">🍯</span>
+
+        <div class="header">
+            <div class="pooh-icon">🧸</div>
+            <p class="subtitle">Estás invitado al</p>
+            <h1 class="title">Baby Shower</h1>
+            <p class="baby-label">de nuestro pequeño</p>
+            <h2 class="baby-name">Oliver Alessandro</h2>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="parents">
+            <p class="parents-intro">Con mucha alegría y emoción</p>
+            <p class="parents-names">Rosario & Alexander</p>
+            <p class="parents-intro">te invitan a celebrar</p>
+        </div>
+
+        <div class="details">
+            <div class="detail-item">
+                <div class="detail-icon">📅</div>
+                <p class="detail-label">Fecha</p>
+                <p class="detail-value">17 de Enero<br>2026</p>
+            </div>
+            <div class="detail-item">
+                <div class="detail-icon">🕕</div>
+                <p class="detail-label">Hora</p>
+                <p class="detail-value">17:30 hrs</p>
+            </div>
+            <div class="detail-item">
+                <div class="detail-icon">📍</div>
+                <p class="detail-label">Lugar</p>
+                <p class="detail-value">Villa<br>Los Molles</p>
+            </div>
+        </div>
+
+        <div class="qr-section">
+            <p class="qr-title">📱 Confirma tu asistencia escaneando el código:</p>
+            <div class="qr-code">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=TU_URL_AQUI" alt="QR Code">
+            </div>
+            <p class="website-url">O visita: <strong>TU_URL_AQUI</strong></p>
+        </div>
+
+        <div class="footer-decoration">🧸🍯🐝💛</div>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button>
+</body>
+
+</html>

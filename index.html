@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Shower de Oliver Alessandro ⭐</title>
+    <meta name="description"
+        content="Invitación al Baby Shower de Oliver Alessandro - Celebremos juntos la llegada de nuestro pequeño príncipe">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated Stars Background -->
+    <div class="stars-background">
+        <div class="star star-1">✦</div>
+        <div class="star star-2">✧</div>
+        <div class="star star-3">✦</div>
+        <div class="star star-4">★</div>
+        <div class="star star-5">✦</div>
+        <div class="star star-6">✧</div>
+        <div class="star star-7">★</div>
+        <div class="star star-8">✦</div>
+        <div class="star star-9">✧</div>
+        <div class="star star-10">★</div>
+        <div class="star star-11">✦</div>
+        <div class="star star-12">✧</div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="bee bee-1">⭐</div>
+        <div class="bee bee-2">✨</div>
+        <div class="bee bee-3">⭐</div>
+        <div class="honey-pot honey-1">🌙</div>
+        <div class="honey-pot honey-2">💫</div>
+        <div class="balloon balloon-1">🪐</div>
+        <div class="balloon balloon-2">🌟</div>
+    </div>
+
+    <!-- Floating RSVP Button -->
+    <a href="#rsvp" class="floating-rsvp-btn" id="floating-rsvp-btn">
+        <span class="floating-btn-icon">⭐</span>
+        <span class="floating-btn-text">Confirmar Asistencia</span>
+    </a>
+
+    <!-- Hidden YouTube Player (only audio) -->
+    <div id="youtube-player-container"
+        style="position: absolute; top: -9999px; left: -9999px; width: 1px; height: 1px; overflow: hidden;">
+        <div id="youtube-player"></div>
+    </div>
+
+    <!-- Music Toggle Button -->
+    <button class="music-toggle-btn" id="music-toggle-btn" title="Activar música">
+        <span class="music-icon" id="music-icon">🎶</span>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-wrapper">
+            <!-- Image Card -->
+            <div class="hero-image-card">
+                <img src="images/principito.jpg" alt="El Principito" class="hero-image">
+                <div class="image-frame"></div>
+            </div>
+
+            <!-- Content Card -->
+            <div class="hero-content-card">
+                <div class="stars-decoration">✨ ⭐ ✨</div>
+                <p class="subtitle animate-fade-in">Estás invitado al</p>
+                <h1 class="title animate-bounce-in">Baby Shower</h1>
+                <div class="divider-stars">
+                    <span>🌙</span>
+                    <span class="divider-line"></span>
+                    <span>⭐</span>
+                    <span class="divider-line"></span>
+                    <span>🌙</span>
+                </div>
+                <p class="baby-name animate-fade-in-delay">de nuestro pequeño príncipe</p>
+                <h2 class="name animate-scale-in">Oliver Alessandro</h2>
+                <div class="hero-date">
+                    <span class="date-icon">📅</span>
+                    <span>17 de Enero, 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <span class="divider-star">✦</span>
+        <span class="divider-wave">〰️</span>
+        <span class="divider-star">⭐</span>
+        <span class="divider-wave">〰️</span>
+        <span class="divider-star">✦</span>
+    </div>
+
+    <!-- Parents Section -->
+    <section class="parents-section">
+        <div class="container">
+            <div class="parents-card">
+                <div class="heart-decoration">⭐</div>
+                <p class="parents-intro">Con mucha alegría y emoción</p>
+                <h3 class="parents-names">Rosario & Alexander</h3>
+                <p class="parents-message">Te invitan a celebrar la próxima llegada de su pequeño príncipe a este
+                    maravilloso planeta</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details -->
+    <section class="details-section">
+        <div class="container">
+            <h3 class="section-title">✨ Detalles del Evento ✨</h3>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">📅</div>
+                    <h4>Fecha</h4>
+                    <p class="detail-main">17 de Enero, 2026</p>
+                    <p class="detail-sub">Sábado</p>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">🕕</div>
+                    <h4>Hora</h4>
+                    <p class="detail-main">17:30 hrs</p>
+                    <p class="detail-sub">¡Te esperamos puntual!</p>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">📍</div>
+                    <h4>Lugar</h4>
+                    <p class="detail-main">Villa Los Molles</p>
+                    <p class="detail-sub">Nuestro rincón especial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h3 class="section-title">📍 ¿Cómo Llegar? 📍</h3>
+            <p class="map-description">Condominio Villa Los Molles, Comas - Lima</p>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.6247884452537!2d-77.0593746!3d-11.9311794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d1caf5147409%3A0xd71209c2b286b2a0!2sCondominios%20Villa%20Los%20Molles!5e0!3m2!1ses!2spe!4v1765329430907!5m2!1ses!2spe"
+                    width="100%" height="350" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <a href="https://maps.app.goo.gl/wxw7GbmUBWxivRwc8" target="_blank" class="map-btn">
+                <span>🗺️</span> Abrir en Google Maps
+            </a>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section class="message-section">
+        <div class="container">
+            <div class="message-card">
+                <div class="quote-mark">"</div>
+                <p class="message-text">
+                    Un pequeño príncipe está por llegar a nuestras vidas,
+                    trayendo consigo un universo lleno de estrellas, amor y sueños.
+                    Tu presencia hará este momento aún más mágico y especial.
+                </p>
+                <p class="message-signature">— Con amor, la familia de Oliver Alessandro ⭐</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp-section" id="rsvp">
+        <div class="container">
+            <h3 class="section-title">⭐ Confirma tu Asistencia ⭐</h3>
+            <p class="rsvp-text">¡Nos encantaría contar contigo en este día tan especial!</p>
+
+            <!-- RSVP Form -->
+            <form id="rsvp-form" class="rsvp-form">
+                <!-- Step 1: Select number of guests -->
+                <div id="step-1" class="form-step">
+                    <div class="form-group">
+                        <label for="guest-count">
+                            <span class="label-icon">👥</span>
+                            ¿Cuántas personas asistirán?
+                        </label>
+                        <select id="guest-count" name="invitados" required>
+                            <option value="">Selecciona</option>
+                            <option value="1">1 persona</option>
+                            <option value="2">2 personas</option>
+                            <option value="3">3 personas</option>
+                            <option value="4">4 personas</option>
+                            <option value="5">5 personas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Step 2: Guest details (generated dynamically) -->
+                <div id="step-2" class="form-step" style="display: none;">
+                    <div class="guests-header">
+                        <span class="label-icon">📝</span>
+                        <span>Datos de los invitados</span>
+                    </div>
+                    <div id="guests-container" class="guests-container">
+                        <!-- Guest rows will be generated here -->
+                    </div>
+
+                    <div class="form-group phone-general">
+                        <label for="guest-phone">
+                            <span class="label-icon">📱</span>
+                            Teléfono de contacto
+                        </label>
+                        <input type="tel" id="guest-phone" name="telefono" placeholder="987 654 321" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn" style="display: none;">
+                    <span class="btn-icon">⭐</span>
+                    Confirmar Asistencia
+                </button>
+
+                <div id="form-message" class="form-message"></div>
+
+                <!-- Calendar Download Button (hidden initially) -->
+                <div id="calendar-section" class="calendar-section" style="display: none;">
+                    <p class="calendar-text">📅 ¡Añade el evento a tu calendario!</p>
+                    <div class="calendar-buttons">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Baby%20Shower%20de%20Oliver%20Alessandro&dates=20260117T173000/20260117T213000&details=No%20olvides%20el%20Baby%20Shower%20de%20Oliver%20Alessandro!&location=Condominios%20Villa%20Los%20Molles%2C%20Comas%2C%20Lima"
+                            target="_blank" class="calendar-btn google-cal-btn">
+                            <span>📱</span> Agregar a Google Calendar
+                        </a>
+                        <button type="button" class="calendar-btn download-ics-btn" id="download-calendar-btn">
+                            <span>🗓️</span> Descargar .ics (iPhone/Outlook)
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <div class="container">
+            <h3 class="section-title">⏰ Cuenta Regresiva ⏰</h3>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-decoration">⭐🌙✨💫🪐</div>
+        <p>Celebremos juntos la llegada de <strong>Oliver Alessandro</strong></p>
+        <p class="footer-date">17 de Enero, 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
