@@ -483,24 +483,14 @@ function initRSVPForm() {
             'END:VCALENDAR'
         ].join('\r\n');
 
-        // Check if on mobile/Android
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-        if (isMobile) {
-            // Use data URI for better mobile compatibility
-            const dataUri = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsContent);
-            window.open(dataUri, '_blank');
-        } else {
-            // Desktop download
-            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = 'baby-shower-oliver.ics';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            URL.revokeObjectURL(link.href);
-        }
+        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'baby-shower-oliver.ics';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(link.href);
     }
 
     function formatICSDate(date) {
