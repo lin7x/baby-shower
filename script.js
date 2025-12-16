@@ -454,43 +454,32 @@ function initRSVPForm() {
     }
 
     function downloadICSFile() {
-        const icsContent = [
-            'BEGIN:VCALENDAR',
-            'VERSION:2.0',
-            'PRODID:-//Baby Shower Oliver Alessandro//ES',
-            'CALSCALE:GREGORIAN',
-            'METHOD:PUBLISH',
-            'BEGIN:VEVENT',
-            'UID:babyshower-oliver-2026@invitation',
-            'DTSTAMP:' + formatICSDate(new Date()),
-            'DTSTART:20260117T173000',
-            'DTEND:20260117T213000',
-            'SUMMARY:Baby Shower de Oliver Alessandro',
-            'DESCRIPTION:No olvides el Baby Shower de Oliver Alessandro! Nos vemos en este dia tan especial.',
-            'LOCATION:Condominios Villa Los Molles\\, Comas\\, Lima',
-            'STATUS:CONFIRMED',
-            'BEGIN:VALARM',
-            'TRIGGER:-P1D',
-            'ACTION:DISPLAY',
-            'DESCRIPTION:Recordatorio: Manana es el Baby Shower de Oliver Alessandro',
-            'END:VALARM',
-            'BEGIN:VALARM',
-            'TRIGGER:-PT2H',
-            'ACTION:DISPLAY',
-            'DESCRIPTION:Recordatorio: El Baby Shower es en 2 horas',
-            'END:VALARM',
-            'END:VEVENT',
-            'END:VCALENDAR'
-        ].join('\r\n');
+        const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Baby Shower Oliver Alessandro//ES
+BEGIN:VEVENT
+UID:babyshower-oliver-2026@invitation
+DTSTAMP:${formatICSDate(new Date())}
+DTSTART:20260117T173000
+DTEND:20260117T213000
+SUMMARY:Baby Shower de Oliver Alessandro
+DESCRIPTION:No olvides el Baby Shower de Oliver Alessandro
+LOCATION:Condominios Villa Los Molles, Comas, Lima
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Recordatorio Baby Shower
+END:VALARM
+END:VEVENT
+END:VCALENDAR`;
 
-        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        const blob = new Blob([icsContent], { type: 'text/calendar' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
         link.download = 'baby-shower-oliver.ics';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        URL.revokeObjectURL(link.href);
     }
 
     function formatICSDate(date) {
