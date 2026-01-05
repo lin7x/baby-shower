@@ -2,7 +2,7 @@
 
 // Countdown Timer
 function initCountdown() {
-    const eventDate = new Date('January 17, 2026 17:30:00').getTime();
+    const eventDate = new Date('January 18, 2026 15:30:00').getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
@@ -297,7 +297,7 @@ function initRSVPForm() {
             row.className = 'guest-row';
             row.innerHTML = `
                 <div class="guest-row-header">
-                    <span>⭐</span> Invitado ${i}
+                    <span>🧸</span> Invitado ${i}
                 </div>
                 <div class="guest-row-fields">
                     <div class="form-group">
@@ -369,7 +369,7 @@ function initRSVPForm() {
                 // Save to localStorage as backup
                 saveToLocalStorage({ guests: allGuestsData });
 
-                showMessage('success', '🎉 ¡Gracias por confirmar tu asistencia! Te esperamos el 17 de enero. ⭐🌙');
+                showMessage('success', '🎉 ¡Gracias por confirmar tu asistencia! Te esperamos el 18 de enero. 🧸💙');
                 showCalendarSection();
                 resetFormCompletely();
             } else {
@@ -386,7 +386,7 @@ function initRSVPForm() {
                 // Save to localStorage as backup
                 saveToLocalStorage({ guests: allGuestsData });
 
-                showMessage('success', '🎉 ¡Gracias por confirmar tu asistencia! Te esperamos el 17 de enero. ⭐🌙');
+                showMessage('success', '🎉 ¡Gracias por confirmar tu asistencia! Te esperamos el 18 de enero. 🧸💙');
                 showCalendarSection();
                 resetFormCompletely();
             }
@@ -399,7 +399,7 @@ function initRSVPForm() {
             showMessage('error', 'Hubo un problema al enviar. Por favor, intenta nuevamente.');
         } finally {
             submitBtn.disabled = false;
-            submitBtn.innerHTML = '<span class="btn-icon">⭐</span> Confirmar Asistencia';
+            submitBtn.innerHTML = '<span class="btn-icon">🧸</span> Confirmar Asistencia';
         }
     });
 
@@ -442,11 +442,11 @@ function initRSVPForm() {
     }
 
     function generateGoogleCalendarUrl() {
-        const eventTitle = 'Baby Shower de Oliver Alessandro ⭐';
+        const eventTitle = 'Baby Shower de Renato Emiliano 🧸';
         const eventLocation = 'Condominios Villa Los Molles, Comas, Lima';
-        const eventDescription = '¡No olvides el Baby Shower de Oliver Alessandro! Nos vemos en este día tan especial. 🌙⭐';
-        const startDate = '20260117T173000'; // Jan 17, 2026 5:30 PM
-        const endDate = '20260117T213000';   // Jan 17, 2026 9:30 PM
+        const eventDescription = '¡No olvides el Baby Shower de Renato Emiliano! Nos vemos en este día tan especial. 🧸💙';
+        const startDate = '20260118T153000'; // Jan 18, 2026 3:30 PM
+        const endDate = '20260118T193000';   // Jan 18, 2026 7:30 PM
 
         const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(eventLocation)}`;
 
@@ -456,14 +456,14 @@ function initRSVPForm() {
     function downloadICSFile() {
         const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Baby Shower Oliver Alessandro//ES
+PRODID:-//Baby Shower Renato Emiliano//ES
 BEGIN:VEVENT
-UID:babyshower-oliver-2026@invitation
+UID:babyshower-renato-2026@invitation
 DTSTAMP:${formatICSDate(new Date())}
-DTSTART:20260117T173000
-DTEND:20260117T213000
-SUMMARY:Baby Shower de Oliver Alessandro
-DESCRIPTION:No olvides el Baby Shower de Oliver Alessandro
+DTSTART:20260118T153000
+DTEND:20260118T193000
+SUMMARY:Baby Shower de Renato Emiliano
+DESCRIPTION:No olvides el Baby Shower de Renato Emiliano
 LOCATION:Condominios Villa Los Molles, Comas, Lima
 BEGIN:VALARM
 TRIGGER:-P1D
@@ -476,7 +476,7 @@ END:VCALENDAR`;
         const blob = new Blob([icsContent], { type: 'text/calendar' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
-        link.download = 'baby-shower-oliver.ics';
+        link.download = 'baby-shower-renato.ics';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -517,10 +517,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initSparkles();
     initRSVPForm();
 
-    console.log('🧸 Baby Shower Invitation for Oliver Alessandro loaded successfully! 🍯');
+    console.log('🧸 Baby Shower Invitation for Renato Emiliano loaded successfully! 💙');
 });
 
 // Add some festive console styling
-console.log('%c 🧸 Welcome to Oliver Alessandro\'s Baby Shower! 🍯',
-    'background: linear-gradient(to right, #FFD93D, #F5A623); color: #4A3728; font-size: 20px; padding: 10px 20px; border-radius: 10px; font-family: cursive;');
+console.log('%c 🧸 Welcome to Renato Emiliano\'s Baby Shower! 💙',
+    'background: linear-gradient(to right, #87CEEB, #F5F5DC); color: #5B4A3D; font-size: 20px; padding: 10px 20px; border-radius: 10px; font-family: cursive;');
 
